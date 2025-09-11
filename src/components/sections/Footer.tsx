@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube, X, Mail, MessageCircle, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import Container from '../shared/Container';
 
@@ -17,20 +17,12 @@ export default function Footer() {
     { name: 'Size Guide', href: '#' }
   ];
 
-  const customerService = [
-    { name: 'Shipping Info', href: '#' },
-    { name: 'Returns', href: '#' },
-    { name: 'Size Guide', href: '#' },
-    { name: 'FAQ', href: '#' },
-    { name: 'Contact Us', href: '#' },
-    { name: 'Track Order', href: '#' }
-  ];
-
+  
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'YouTube', icon: Youtube, href: '#' }
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/the_lady_betty_/' },
+    { name: 'Twitter', icon: X, href: '#' },
+    { name: 'WhatsApp', icon: MessageCircle, href: 'https://wa.me/7067030161' },
+    { name: 'Email', icon: Mail, href: 'mailto:hello@ladybetty.com' }
   ];
 
   return (
@@ -64,52 +56,23 @@ export default function Footer() {
               </p>
               
               {/* Contact Info */}
-              
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-new-accent p-2 rounded-full"><Mail size={16} className="text-white" /></div>
+                  <a href="mailto:hello@ladybetty.com" className="text-warm-beige/90 hover:text-soft-rose transition-colors">hello@ladybetty.com</a>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="bg-new-accent p-2 rounded-full"><MapPin size={16} className="text-white" /></div>
+                  <div className="text-warm-beige/90">
+                    <p>1, Adekunle Sule, Majek Cele</p>
+                    <p>Eti-Osa, Sangotedo 101233, Lagos</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
-            {/* Quick Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                {quickLinks.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-warm-beige/80 hover:text-soft-rose transition-colors duration-200"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            
 
-            {/* Customer Service */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-semibold mb-4">Customer Service</h4>
-              <ul className="space-y-2">
-                {customerService.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-warm-beige/80 hover:text-soft-rose transition-colors duration-200"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
 
             {/* Newsletter & Social */}
             <motion.div

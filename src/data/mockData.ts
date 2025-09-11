@@ -65,42 +65,42 @@ export const products: Product[] = [
   {
     id: '1',
     name: 'Elegant Birthday Dress',
-    price: 89.99,
+    price: 18500,
     image: '/images/collections/Birthday_dress.jpeg',
     category: 'Dresses'
   },
   {
     id: '2',
     name: 'Cream & Chocolate Set',
-    price: 129.99,
+    price: 22500,
     image: '/images/collections/creamandchoc.jpg',
     category: 'Sets'
   },
   {
     id: '3',
     name: 'Summer Essential Dress',
-    price: 149.99,
+    price: 27500,
     image: '/images/collections/e4cc8f25ddf3e14e264a6054ebaa3a8b.jpg',
     category: 'Dresses'
   },
   {
     id: '4',
     name: 'Evening Elegance',
-    price: 199.99,
+    price: 32500,
     image: '/images/collections/fb1ebee02fc2fe7605b961fce5cca6ee.jpg',
     category: 'Evening Wear'
   },
   {
     id: '5',
     name: 'Designer Collection',
-    price: 299.99,
+    price: 35000,
     image: '/images/collections/image-7-removebg-preview.png',
     category: 'Premium'
   },
   {
     id: '6',
     name: 'Classic Birthday Style',
-    price: 79.99,
+    price: 15000,
     image: '/images/collections/Birthday_dress.jpeg',
     category: 'Dresses'
   }
@@ -109,43 +109,43 @@ export const products: Product[] = [
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Adunni Adebayo',
+    name: 'Aisha',
     location: 'Lagos, Nigeria',
     rating: 5,
     text: 'The quality of these pieces is incredible. I feel confident and beautiful every time I wear them. The fit is perfect and the fabrics are so luxurious.',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face'
+    image: '/images/testimonials/Aisha.jpg'
   },
   {
     id: '2',
-    name: 'Chioma Nwosu',
+    name: 'Chioma',
     location: 'Abuja, Nigeria',
     rating: 5,
     text: 'I love how versatile the collections are. I can dress them up for work or down for weekends. The attention to detail is amazing.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face'
+    image: '/images/testimonials/Chioma.jpg'
   },
   {
     id: '3',
-    name: 'Funmi Okafor',
+    name: 'Halimat',
     location: 'Enugu, Nigeria',
     rating: 5,
     text: 'These clothes make me feel empowered and elegant. The customer service is exceptional and shipping is always fast.',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face'
+    image: '/images/testimonials/Halimat.jpg'
   },
   {
     id: '4',
-    name: 'Ngozi Eze',
+    name: 'Reola',
     location: 'Port Harcourt, Nigeria',
     rating: 5,
     text: 'Lady Betty has transformed my wardrobe completely. The designs are so elegant and the quality is outstanding. I get compliments everywhere I go!',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face'
+    image: '/images/testimonials/reola.png'
   },
   {
     id: '5',
-    name: 'Modupe Moshood',
+    name: 'Shade',
     location: 'Lagos, Nigeria',
     rating: 5,
     text: 'The corporate fits I got from Lady Betty were absolutely beautiful! Perfect for my business meetings and professional events. The quality and attention to detail is exceptional.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face'
+    image: '/images/testimonials/shade.jpg'
   }
 ];
 

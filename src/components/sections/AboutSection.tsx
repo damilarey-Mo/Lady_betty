@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Button from '../ui/Button';
 import Container from '../shared/Container';
 import Section from '../shared/Section';
@@ -56,56 +55,7 @@ export default function AboutSection() {
           </motion.div>
 
           {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2"
-          >
-            <div className="relative">
-              <Image
-                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=700&fit=crop"
-                alt="Elegant woman in fashion"
-                width={600}
-                height={700}
-                className="w-full h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-olive/20 to-transparent rounded-2xl" />
-              
-              {/* Floating Elements */}
-              <motion.div
-                animate={{ 
-                  y: [0, -10, 0],
-                  rotate: [0, 5, 0]
-                }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute -top-4 -right-4 w-16 h-16 bg-soft-rose rounded-full flex items-center justify-center shadow-lg"
-              >
-                <span className="text-white font-bold text-lg">✨</span>
-              </motion.div>
-              
-              <motion.div
-                animate={{ 
-                  y: [0, 10, 0],
-                  rotate: [0, -5, 0]
-                }}
-                transition={{ 
-                  duration: 5, 
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="absolute -bottom-4 -left-4 w-12 h-12 bg-soft-rose rounded-full flex items-center justify-center shadow-lg"
-              >
-                <span className="text-white font-bold text-sm">💎</span>
-              </motion.div>
-            </div>
-          </motion.div>
+          
         </div>
       </Container>
     </Section>

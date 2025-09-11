@@ -75,14 +75,16 @@ export default function InstagramFeed() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Button 
-            variant="primary" 
-            size="lg"
-            className="inline-flex items-center space-x-2"
-          >
-            <span>Follow Us on Instagram</span>
-            <Instagram size={20} />
-          </Button>
+          <a href="https://www.instagram.com/the_lady_betty_/" target="_blank" rel="noopener noreferrer">
+            <Button 
+              variant="primary" 
+              size="lg"
+              className="inline-flex items-center space-x-2"
+            >
+              <span>Follow Us on Instagram</span>
+              <Instagram size={20} />
+            </Button>
+          </a>
           
           <p className="text-sm text-[#6B7280] mt-4">
             Join our community of fashion enthusiasts and get daily inspiration

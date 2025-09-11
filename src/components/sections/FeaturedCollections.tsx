@@ -64,7 +64,9 @@ export default function FeaturedCollections() {
                   </p>
                   
                   <motion.a
-                    href="#"
+                    href="https://wa.me/7067030161"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ x: 5 }}
                     className="inline-flex items-center text-dark-olive font-medium hover:text-new-accent transition-colors duration-200 group/link"
                   >

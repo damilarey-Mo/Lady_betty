@@ -144,7 +144,7 @@ export default function BestSellers() {
                       </h3>
                       <p className="text-sm text-dark-olive/70 mb-2">{product.category}</p>
                       <p className="text-lg font-semibold text-dark-olive">
-                        ${product.price}
+                        ₦{product.price.toLocaleString()}
                       </p>
                     </div>
                   </Card>
@@ -162,7 +162,9 @@ export default function BestSellers() {
           viewport={{ once: true }}
           className="text-center mt-10"
         >
-          <Button variant="primary">View All Products</Button>
+          <a href="https://wa.me/7067030161" target="_blank" rel="noopener noreferrer">
+            <Button variant="primary">View All Products</Button>
+          </a>
         </motion.div>
       </Container>
     </Section>
