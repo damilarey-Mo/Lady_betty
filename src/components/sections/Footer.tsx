@@ -55,20 +55,7 @@ export default function Footer() {
                 Elevate your wardrobe with pieces that empower your confidence.
               </p>
               
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <div className="bg-new-accent p-2 rounded-full"><Mail size={16} className="text-white" /></div>
-                  <a href="mailto:hello@ladybetty.com" className="text-warm-beige/90 hover:text-soft-rose transition-colors">hello@ladybetty.com</a>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="bg-new-accent p-2 rounded-full"><MapPin size={16} className="text-white" /></div>
-                  <div className="text-warm-beige/90">
-                    <p>1, Adekunle Sule, Majek Cele</p>
-                    <p>Eti-Osa, Sangotedo 101233, Lagos</p>
-                  </div>
-                </div>
-              </div>
+              {/* Contact Info moved below into Social section */}
             </motion.div>
 
             
@@ -85,7 +72,6 @@ export default function Footer() {
               <p className="text-warm-beige/80 mb-4">
                 Follow us for the latest updates and style inspiration.
               </p>
-              
               {/* Social Links */}
               <div className="flex space-x-4 mb-6">
                 {socialLinks.map((social) => (
@@ -100,9 +86,32 @@ export default function Footer() {
                 ))}
               </div>
             </motion.div>
+
+            {/* Contact Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-new-accent p-2 rounded-full"><Mail size={16} className="text-white" /></div>
+                  <a href="mailto:hello@ladybetty.com" className="text-warm-beige/90 hover:text-soft-rose transition-colors">hello@ladybetty.com</a>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="bg-new-accent p-2 rounded-full"><MapPin size={16} className="text-white" /></div>
+                  <div className="text-warm-beige/90">
+                    <p>1, Adekunle Sule, Majek Cele</p>
+                    <p>Eti-Osa, Sangotedo 101233, Lagos</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-
+            
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
