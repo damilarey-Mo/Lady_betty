@@ -140,9 +140,11 @@ export default function Hero() {
                   transition={{ duration: 0.8, delay: 0.6 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 >
-                  <Button variant="secondary" size="lg" className="shadow-2xl">
-                    {slides[currentSlide].buttonText}
-                  </Button>
+                  <a href="https://wa.me/7067030161" target="_blank" rel="noopener noreferrer">
+                    <Button variant="secondary" size="lg" className="shadow-2xl">
+                      {slides[currentSlide].buttonText}
+                    </Button>
+                  </a>
                 </motion.div>
               </div>
             </div>

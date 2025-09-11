@@ -198,7 +198,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-dark-olive mb-1">Phone</h4>
-                  <p className="text-dark-olive/70">+234 (706) 1703-0161</p>
+                  <p className="text-dark-olive/70">+234 706 703 0161</p>
                   <p className="text-sm text-dark-olive/50">Mon-Fri, 9AM-6PM EST</p>
                 </div>
               </div>
@@ -209,8 +209,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-dark-olive mb-1">Address</h4>
-                  <p className="text-dark-olive/70">1 Adekunle Sule St,</p>
-                  <p className="text-dark-olive/70">Eti-Osa, Lagos 106104, Lagos</p>
+                  <p className="text-dark-olive/70">1, Adekunle Sule, Majek Cele</p>
+                  <p className="text-dark-olive/70">Eti-Osa, Sangotedo 101233, Lagos</p>
                   <p className="text-sm text-dark-olive/50">By appointment only</p>
                 </div>
               </div>
