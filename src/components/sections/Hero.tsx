@@ -9,6 +9,7 @@ import Button from '../ui/Button';
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [slideDirection, setSlideDirection] = useState(1); // 1 = next, -1 = prev
 
   const scrollToNext = () => {
     const nextSection = document.getElementById('collections');
@@ -52,6 +53,7 @@ export default function Hero() {
   useEffect(() => {
     if (!isAutoPlaying) return;
     const interval = setInterval(() => {
+      setSlideDirection(1);
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -59,22 +61,25 @@ export default function Hero() {
 
 
   const goToSlide = (index: number) => {
+    if (index === currentSlide) return;
+    const total = slides.length;
+    // Compute shortest direction for wrap-around
+    const forwardDistance = (index - currentSlide + total) % total;
+    const backwardDistance = (currentSlide - index + total) % total;
+    setSlideDirection(forwardDistance <= backwardDistance ? 1 : -1);
     setCurrentSlide(index);
   };
 
   const slideVariants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
+    enter: () => ({
       opacity: 0
     }),
     center: {
       zIndex: 1,
-      x: 0,
       opacity: 1
     },
-    exit: (direction: number) => ({
+    exit: () => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
       opacity: 0
     })
   };
@@ -88,17 +93,16 @@ export default function Hero() {
     >
       {/* Carousel Container */}
       <div className="relative w-full h-full">
-        <AnimatePresence mode="wait" custom={currentSlide}>
+        <AnimatePresence mode="wait" custom={slideDirection}>
           <motion.div
             key={currentSlide}
-            custom={currentSlide}
+            custom={slideDirection}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
             transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
+              opacity: { type: 'tween', duration: 0.8, ease: 'easeInOut' }
             }}
             className="absolute inset-0"
           >
