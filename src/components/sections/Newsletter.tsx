@@ -30,7 +30,7 @@ export default function Newsletter() {
     resolver: zodResolver(newsletterSchema),
   });
 
-  const onSubmit = async (data: NewsletterFormData) => {
+  const onSubmit = async () => {
     setIsLoading(true);
     
     // Simulate API call

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import Image from 'next/image';
 import { testimonials } from '@/data/mockData';
 import Container from '../shared/Container';
 import Section from '../shared/Section';
@@ -11,8 +12,17 @@ export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  // Debug logging
-  
+  // Auto-play functionality - moved before early return
+  useEffect(() => {
+    if (!testimonials || testimonials.length === 0) return;
+    
+    const timer = setInterval(() => {
+      setDirection(1);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   // Ensure testimonials exist and have data
   if (!testimonials || testimonials.length === 0) {
@@ -38,16 +48,6 @@ export default function Testimonials() {
   if (validIndex !== currentIndex) {
     setCurrentIndex(validIndex);
   }
-
-  // Auto-play functionality
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [testimonials.length]);
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -166,7 +166,7 @@ export default function Testimonials() {
 
                   {/* Testimonial Text */}
                   <blockquote className="text-xl md:text-2xl text-dark-olive leading-relaxed mb-8 font-medium italic">
-                    "{currentTestimonial.text}"
+                    &ldquo;{currentTestimonial.text}&rdquo;
                   </blockquote>
 
                   {/* Star Rating */}
@@ -187,9 +187,11 @@ export default function Testimonials() {
                   {/* Customer Info */}
                   <div className="flex items-center justify-center space-x-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                      <img
+                      <Image
                         src={currentTestimonial.image}
                         alt={currentTestimonial.name}
+                        width={64}
+                        height={64}
                         className="w-full h-full object-cover"
                       />
                     </div>

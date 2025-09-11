@@ -33,7 +33,7 @@ export default function ContactSection() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = async () => {
     setIsLoading(true);
     
     // Simulate API call
@@ -62,7 +62,7 @@ export default function ContactSection() {
           </h2>
           <div className="w-20 h-1 bg-new-accent rounded-full mb-6"></div>
           <p className="text-lg text-dark-olive/70 max-w-2xl mb-8">
-            Have questions about our collections or need styling advice? We'd love to hear from you.
+            Have questions about our collections or need styling advice? We&apos;d love to hear from you.
           </p>
         </motion.div>
 
@@ -156,7 +156,7 @@ export default function ContactSection() {
                   Message Sent Successfully!
                 </h4>
                 <p className="text-green-700">
-                  Thank you for reaching out. We'll get back to you within 24 hours.
+                  Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                 </p>
               </motion.div>
             )}
@@ -175,7 +175,7 @@ export default function ContactSection() {
                 Contact Information
               </h3>
               <p className="text-dark-olive/70 mb-6 leading-relaxed">
-                We're here to help you find your perfect style. Reach out to us through any of these channels.
+                We&apos;re here to help you find your perfect style. Reach out to us through any of these channels.
               </p>
             </div>
 
@@ -188,7 +188,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-semibold text-dark-olive mb-1">Email</h4>
                   <p className="text-dark-olive/70">hello@ladybetty.com</p>
-                  <p className="text-sm text-dark-olive/50">We'll respond within 24 hours</p>
+                  <p className="text-sm text-dark-olive/50">We&apos;ll respond within 24 hours</p>
                 </div>
               </div>
 

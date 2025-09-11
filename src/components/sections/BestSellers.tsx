@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
+import Image from 'next/image';
 import { products } from '@/data/mockData';
 import Container from '../shared/Container';
 import Section from '../shared/Section';
@@ -47,9 +48,9 @@ export default function BestSellers() {
 
   const maxIndex = Math.max(0, products.length - slidesPerView);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
+  }, [maxIndex]);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
@@ -59,7 +60,7 @@ export default function BestSellers() {
     if (!isAutoPlaying) return;
     const interval = setInterval(() => nextSlide(), 5000);
     return () => clearInterval(interval);
-  }, [isAutoPlaying, maxIndex]);
+  }, [isAutoPlaying, maxIndex, nextSlide]);
 
   const pauseAutoPlay = () => setIsAutoPlaying(false);
   const resumeAutoPlay = () => setIsAutoPlaying(true);
@@ -118,9 +119,11 @@ export default function BestSellers() {
                 >
                   <Card className="h-full">
                     <div className="relative overflow-hidden">
-                      <img
+                      <Image
                         src={product.image}
                         alt={product.name}
+                        width={300}
+                        height={320}
                         className="w-full h-80 object-cover transition-transform duration-500 hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-black/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />

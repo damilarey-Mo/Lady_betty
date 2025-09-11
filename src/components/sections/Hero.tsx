@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Sparkles, Heart } from 'lucide-react';
+import Image from 'next/image';
 import Button from '../ui/Button';
 
 export default function Hero() {
@@ -103,10 +104,11 @@ export default function Hero() {
           >
             {/* Background Image */}
             <div className="absolute inset-0">
-              <img
+              <Image
                 src={slides[currentSlide].image}
                 alt={slides[currentSlide].title}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
             </div>

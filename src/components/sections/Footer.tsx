@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import Image from 'next/image';
 import Container from '../shared/Container';
 
 export default function Footer() {
@@ -49,9 +50,11 @@ export default function Footer() {
                 whileHover={{ scale: 1.05 }}
                 className="transition-all duration-300 mb-4"
               >
-                <img
+                <Image
                   src="/images/logo/ladybettylogo.png"
                   alt="Lady Betty"
+                  width={200}
+                  height={64}
                   className="h-16 w-auto"
                 />
               </motion.div>

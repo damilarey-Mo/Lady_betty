@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Heart, MessageCircle, Instagram } from 'lucide-react';
+import Image from 'next/image';
 import { instagramPosts } from '@/data/mockData';
 import Container from '../shared/Container';
 import Section from '../shared/Section';
@@ -38,9 +39,11 @@ export default function InstagramFeed() {
               viewport={{ once: true }}
               className="relative group aspect-square overflow-hidden rounded-lg"
             >
-              <img
+              <Image
                 src={post.image}
                 alt={`Instagram post ${post.id}`}
+                width={300}
+                height={300}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               

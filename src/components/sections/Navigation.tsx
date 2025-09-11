@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import Button from '../ui/Button';
 import Container from '../shared/Container';
 
@@ -43,9 +44,11 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             className="transition-all duration-300"
           >
-            <img
+            <Image
               src={isScrolled ? "/images/logo/ladybettylogowebdark.png" : "/images/logo/ladybettylogo.png"}
               alt="Lady Betty"
+              width={200}
+              height={80}
               className="h-20 w-auto"
             />
           </motion.div>

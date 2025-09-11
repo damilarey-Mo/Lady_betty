@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { collections } from '@/data/mockData';
 import Container from '../shared/Container';
 import Section from '../shared/Section';
@@ -36,9 +37,11 @@ export default function FeaturedCollections() {
             >
               <Card className="h-full group">
                 <div className="relative overflow-hidden aspect-[5/6]">
-                  <img
+                  <Image
                     src={collection.image}
                     alt={collection.name}
+                    width={420}
+                    height={540}
                     className="w-[420px] h-[540px] object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-olive/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

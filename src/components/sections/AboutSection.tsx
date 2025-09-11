@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Button from '../ui/Button';
 import Container from '../shared/Container';
 import Section from '../shared/Section';
@@ -41,7 +42,7 @@ export default function AboutSection() {
               </p>
               
               <p>
-                Our commitment to quality extends beyond the garments themselves. We're dedicated to 
+                Our commitment to quality extends beyond the garments themselves. We&apos;re dedicated to 
                 sustainable practices, ethical manufacturing, and creating pieces that will become 
                 cherished staples in your wardrobe for years to come.
               </p>
@@ -63,9 +64,11 @@ export default function AboutSection() {
             className="lg:col-span-2"
           >
             <div className="relative">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=700&fit=crop"
                 alt="Elegant woman in fashion"
+                width={600}
+                height={700}
                 className="w-full h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-olive/20 to-transparent rounded-2xl" />
