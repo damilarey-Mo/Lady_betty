@@ -8,17 +8,11 @@ import Section from '../shared/Section';
 
 export default function AboutSection() {
   return (
-    <Section id="about" background="warm-beige">
+    <Section id="about" background="warm-beige" animationDirection="left" animationDelay={0.2}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="lg:col-span-3 space-y-6"
-          >
+          <div className="lg:col-span-3 space-y-6">
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold font-playfair mb-4 text-dark-olive">
                 Our Story
@@ -47,17 +41,10 @@ export default function AboutSection() {
                 cherished staples in your wardrobe for years to come.
               </p>
             </div>
-
-          </motion.div>
+          </div>
 
           {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2"
-          >
+          <div className="lg:col-span-2">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="/images/products/about betty image.jpg"
@@ -68,7 +55,7 @@ export default function AboutSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-olive/20 to-transparent" />
             </div>
-          </motion.div>
+          </div>
         </div>
       </Container>
     </Section>

@@ -28,7 +28,7 @@ export default function Testimonials() {
   if (!testimonials || testimonials.length === 0) {
     console.log('No testimonials available, showing fallback');
     return (
-      <Section id="testimonials" background="warm-beige-light">
+      <Section id="testimonials" background="warm-beige-light" animationDirection="up" animationDelay={0.4}>
         <Container>
           <div className="text-center py-16">
             <h2 className="text-3xl md:text-4xl font-semibold font-playfair mb-4 text-dark-olive">
@@ -90,7 +90,7 @@ export default function Testimonials() {
   
 
   return (
-    <Section id="testimonials" background="warm-beige-light">
+    <Section id="testimonials" background="warm-beige-light" animationDirection="up" animationDelay={0.4}>
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

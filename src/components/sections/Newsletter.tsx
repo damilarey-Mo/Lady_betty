@@ -45,7 +45,7 @@ export default function Newsletter() {
   };
 
   return (
-    <Section id="newsletter" background="dark-olive">
+    <Section id="newsletter" background="dark-olive" animationDirection="up" animationDelay={0.6}>
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

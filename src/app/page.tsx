@@ -15,15 +15,13 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <Hero />
-      <div className="space-y-8">
-        <FeaturedCollections />
-        <AboutSection />
-        <BestSellers />
-        <Testimonials />
-        <InstagramFeed />
-        <Newsletter />
-        <ContactSection />
-      </div>
+      <FeaturedCollections />
+      <AboutSection />
+      <BestSellers />
+      <Testimonials />
+      <InstagramFeed />
+      <Newsletter />
+      <ContactSection />
       <Footer />
       <WhatsAppButton />
     </main>

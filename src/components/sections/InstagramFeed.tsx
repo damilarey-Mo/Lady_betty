@@ -10,7 +10,7 @@ import Button from '../ui/Button';
 
 export default function InstagramFeed() {
   return (
-    <Section id="instagram" background="warm-beige-light">
+    <Section id="instagram" background="warm-beige-light" animationDirection="left" animationDelay={0.5}>
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

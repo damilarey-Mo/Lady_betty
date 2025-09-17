@@ -48,7 +48,7 @@ export default function ContactSection() {
   };
 
   return (
-    <Section id="contact" background="warm-beige">
+    <Section id="contact" background="warm-beige" animationDirection="right" animationDelay={0.7}>
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -10,20 +10,14 @@ import Card from '../ui/Card';
 
 export default function FeaturedCollections() {
   return (
-    <Section id="collections" background="warm-beige">
+    <Section id="collections" background="warm-beige" animationDirection="up" animationDelay={0.1}>
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-left mb-8"
-        >
+        <div className="text-left mb-8">
           <h2 className="text-3xl md:text-4xl font-semibold font-playfair mb-4 text-dark-olive">
             Featured Collections
           </h2>
           <div className="w-20 h-1 bg-new-accent rounded-full"></div>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
           {collections.map((collection, index) => (
@@ -83,13 +77,7 @@ export default function FeaturedCollections() {
         </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
+        <div className="text-center mt-16">
           <div className=" rounded-2xl p-8 text-dark-olive bg-warm-beige">
             <h3 className="text-2xl font-semibold font-playfair mb-4">
               Ready to Transform Your Style?
@@ -103,7 +91,7 @@ export default function FeaturedCollections() {
               </button>
             </a>
           </div>
-        </motion.div>
+        </div>
       </Container>
     </Section>
   );

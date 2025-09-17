@@ -68,20 +68,14 @@ export default function BestSellers() {
   const translateX = -(currentIndex * (slideWidth + gap));
 
   return (
-    <Section id="bestsellers" background="warm-beige-light">
+    <Section id="bestsellers" background="warm-beige-light" animationDirection="right" animationDelay={0.3}>
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-left mb-8"
-        >
+        <div className="text-left mb-8">
           <h2 className="text-3xl md:text-4xl font-semibold font-playfair mb-4 text-dark-olive">
             Best Sellers
           </h2>
           <div className="w-20 h-1 bg-new-accent rounded-full" />
-        </motion.div>
+        </div>
 
         {/* Carousel Container */}
         <div className="relative" onMouseEnter={pauseAutoPlay} onMouseLeave={resumeAutoPlay}>
