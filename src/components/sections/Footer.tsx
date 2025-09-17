@@ -26,7 +26,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-dark-olive text-warm-beige">
+    <footer className="bg-dark-olive text-warm-beige mt-16">
       <Container>
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
