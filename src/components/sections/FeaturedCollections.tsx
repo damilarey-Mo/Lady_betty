@@ -90,16 +90,18 @@ export default function FeaturedCollections() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className=" rounded-2xl p-8 text-white bg-warm-beige">
+          <div className=" rounded-2xl p-8 text-dark-olive bg-warm-beige">
             <h3 className="text-2xl font-semibold font-playfair mb-4">
               Ready to Transform Your Style?
             </h3>
-            <p className="text-lg mb-6 opacity-90">
+            <p className="text-lg mb-6 text-dark-olive/80">
               Explore our complete collection and discover pieces that speak to your unique style
             </p>
-            <button className="bg-warm-beige text-dark-olive font-semibold py-2 px-4 rounded-full hover:bg-warm-beige-light transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
-              View All Collections
-            </button>
+            <a href="https://www.instagram.com/the_lady_betty_/" target="_blank" rel="noopener noreferrer">
+              <button className="bg-new-accent text-white font-semibold py-2 px-4 rounded-full hover:bg-new-accent/90 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+                View All Collections
+              </button>
+            </a>
           </div>
         </motion.div>
       </Container>

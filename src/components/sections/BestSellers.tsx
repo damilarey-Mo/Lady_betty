@@ -117,16 +117,16 @@ export default function BestSellers() {
                   data-slide
                   className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4"
                 >
-                  <Card className="h-full">
+                  <Card className="h-full group relative">
                     <div className="relative overflow-hidden">
                       <Image
                         src={product.image}
                         alt={product.name}
                         width={300}
                         height={320}
-                        className="w-full h-80 object-cover transition-transform duration-500 hover:scale-110"
+                        className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-black/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                       {/* Quick Add Button */}
                       <motion.button
@@ -138,14 +138,20 @@ export default function BestSellers() {
                       </motion.button>
                     </div>
 
-                    <div className="p-4">
+                    <div className="p-4 relative">
                       <h3 className="font-semibold font-playfair mb-2 text-dark-olive">
                         {product.name}
                       </h3>
                       <p className="text-sm text-dark-olive/70 mb-2">{product.category}</p>
-                      <p className="text-lg font-semibold text-dark-olive">
+                      <p className="text-lg font-semibold text-dark-olive mb-3">
                         ₦{product.price.toLocaleString()}
                       </p>
+                      
+                      {/* Hover Description */}
+                      <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-300 absolute inset-0 bg-black/80 text-white p-4 flex flex-col justify-center items-center text-center">
+                        <h4 className="font-semibold mb-2">{product.color} {product.style}</h4>
+                        <p className="text-sm leading-relaxed">{product.description}</p>
+                      </div>
                     </div>
                   </Card>
                 </div>

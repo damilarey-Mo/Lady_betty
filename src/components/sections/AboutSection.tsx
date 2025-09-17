@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Button from '../ui/Button';
 import Container from '../shared/Container';
 import Section from '../shared/Section';
@@ -47,15 +48,27 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="pt-4">
-              <Button variant="secondary">
-                Learn More
-              </Button>
-            </div>
           </motion.div>
 
           {/* Image */}
-          
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2"
+          >
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <Image
+                src="/images/products/about betty image.jpg"
+                alt="Lady Betty Fashion - Elegant and sophisticated clothing"
+                width={600}
+                height={800}
+                className="w-full h-[600px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-olive/20 to-transparent" />
+            </div>
+          </motion.div>
         </div>
       </Container>
     </Section>

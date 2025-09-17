@@ -1,3 +1,4 @@
+
 export interface Collection {
   id: string;
   name: string;
@@ -12,6 +13,9 @@ export interface Product {
   price: number;
   image: string;
   category: string;
+  description: string;
+  color: string;
+  style: string;
 }
 
 export interface Testimonial {
@@ -33,30 +37,30 @@ export interface InstagramPost {
 export const collections: Collection[] = [
   {
     id: '1',
-    name: 'Birthday Collection',
-    description: 'Elegant dresses perfect for special celebrations and memorable moments.',
-    image: '/images/collections/Birthday_dress.jpeg',
-    category: 'Dresses'
+    name: 'Betty White Maxi Dress',
+    description: 'Elegant full-length maxi dress designed for graceful movement and all-day polish.',
+    image: '/images/products/Betty  White Maxi Dress.JPG',
+    category: 'Maxi'
   },
   {
     id: '2',
-    name: 'Cream & Chocolate',
-    description: 'Sophisticated pieces in warm, neutral tones for everyday elegance.',
-    image: '/images/collections/creamandchoc.jpg',
-    category: 'Casual'
+    name: 'Betty Yellow Maxi Dress',
+    description: 'Vibrant yellow maxi dress that brings sunshine energy to any occasion.',
+    image: '/images/products/Betty Yellow Maxi dress.jpg',
+    category: 'Maxi'
   },
   {
     id: '3',
-    name: 'Summer Essentials',
-    description: 'Light and breezy styles that keep you comfortable and stylish all season.',
-    image: '/images/collections/e4cc8f25ddf3e14e264a6054ebaa3a8b.jpg',
-    category: 'Summer'
+    name: 'Betty Mono Patterned Maxi Dress',
+    description: 'Monochrome patterned maxi dress with elevated simplicity and movement.',
+    image: '/images/products/Betty Mono patterened Maxi dress.jpg',
+    category: 'Monochrome'
   },
   {
     id: '4',
-    name: 'Elegant Evening',
-    description: 'Refined silhouettes and luxe textures for unforgettable nights.',
-    image: '/images/collections/fb1ebee02fc2fe7605b961fce5cca6ee.jpg',
+    name: 'Christy Dress',
+    description: 'Refined full-length dress with elegant lines for formal and special events.',
+    image: '/images/products/Christy dress.jpg',
     category: 'Evening'
   }
 ];
@@ -64,46 +68,114 @@ export const collections: Collection[] = [
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Elegant Birthday Dress',
-    price: 18500,
-    image: '/images/collections/Birthday_dress.jpeg',
-    category: 'Dresses'
+    name: 'Betty White Maxi Dress',
+    price: 28500,
+    image: '/images/products/Betty  White Maxi Dress.JPG',
+    category: 'Maxi',
+    description: 'Elegant white maxi with flowing silhouette for polished occasions.',
+    color: 'White',
+    style: 'Maxi Dress'
   },
   {
     id: '2',
-    name: 'Cream & Chocolate Set',
-    price: 22500,
-    image: '/images/collections/creamandchoc.jpg',
-    category: 'Sets'
+    name: 'Betty Yellow Maxi Dress',
+    price: 27500,
+    image: '/images/products/Betty Yellow Maxi dress.jpg',
+    category: 'Maxi',
+    description: 'Vibrant yellow maxi dress with full-length movement and ease.',
+    color: 'Yellow',
+    style: 'Maxi Dress'
   },
   {
     id: '3',
-    name: 'Summer Essential Dress',
-    price: 27500,
-    image: '/images/collections/e4cc8f25ddf3e14e264a6054ebaa3a8b.jpg',
-    category: 'Dresses'
+    name: 'Betty Patterned Maxi Dress',
+    price: 29500,
+    image: '/images/products/Betty Patterned Maxi dress.jpeg',
+    category: 'Patterned',
+    description: 'Statement patterned maxi for standout moments and confident style.',
+    color: 'Patterned',
+    style: 'Maxi Dress'
   },
   {
     id: '4',
-    name: 'Evening Elegance',
-    price: 32500,
-    image: '/images/collections/fb1ebee02fc2fe7605b961fce5cca6ee.jpg',
-    category: 'Evening Wear'
+    name: 'Betty Mono Patterned Maxi Dress',
+    price: 29500,
+    image: '/images/products/Betty Mono patterened Maxi dress.jpg',
+    category: 'Monochrome',
+    description: 'Modern monochrome maxi with elevated simplicity and flow.',
+    color: 'Monochrome',
+    style: 'Maxi Dress'
   },
   {
     id: '5',
-    name: 'Designer Collection',
-    price: 35000,
-    image: '/images/collections/image-7-removebg-preview.png',
-    category: 'Premium'
+    name: 'Christy Dress',
+    price: 32500,
+    image: '/images/products/Christy dress.jpg',
+    category: 'Evening',
+    description: 'Refined full-length evening dress with elegant lines.',
+    color: 'Neutral',
+    style: 'Evening Dress'
   },
   {
     id: '6',
-    name: 'Classic Birthday Style',
-    price: 15000,
-    image: '/images/collections/Birthday_dress.jpeg',
-    category: 'Dresses'
-  }
+    name: 'Doris Evening Dress',
+    price: 34500,
+    image: '/images/products/Doris Evening dress..JPG',
+    category: 'Evening',
+    description: 'Polished evening silhouette designed for head‑to‑toe presence.',
+    color: 'Navy',
+    style: 'Evening Dress'
+  },
+  {
+    id: '7',
+    name: 'Betty Black Midi Dress',
+    price: 26500,
+    image: '/images/products/Betty Black Midi Dress .jpg',
+    category: 'Midi',
+    description: 'Chic black midi with versatile day‑to‑evening appeal.',
+    color: 'Black',
+    style: 'Midi Dress'
+  },
+  {
+    id: '8',
+    name: 'Betty Two‑Tone Print Mini Dress',
+    price: 25500,
+    image: '/images/products/Betty two tone print Mini Dress.jpg',
+    category: 'Mini',
+    description: 'Playful two‑tone mini designed to stand out.',
+    color: 'Multi',
+    style: 'Mini Dress'
+  },
+  {
+    id: '9',
+    name: 'Enitan Afro Print Shift Dress',
+    price: 23500,
+    image: '/images/products/Enitan Afro print Shift dress .jpg',
+    category: 'Shift',
+    description: 'Afro‑print shift dress with modern cultural flair.',
+    color: 'Print',
+    style: 'Shift Dress'
+  },
+  {
+    id: '10',
+    name: 'Enitan Floral Print Shift Dress',
+    price: 23500,
+    image: '/images/products/Enitan Floral print Shift dress .jpeg',
+    category: 'Shift',
+    description: 'Floral shift dress with soft drape and ease.',
+    color: 'Floral',
+    style: 'Shift Dress'
+  },
+  {
+    id: '11',
+    name: 'Enitan Red Floral Shift Dress',
+    price: 23900,
+    image: '/images/products/Enitan Red Floral Shift dress .jpeg',
+    category: 'Shift',
+    description: 'Red floral shift with confident color and comfort.',
+    color: 'Red Floral',
+    style: 'Shift Dress'
+  },
 ];
 
 export const testimonials: Testimonial[] = [
@@ -156,38 +228,56 @@ console.log('testimonials length:', testimonials.length);
 export const instagramPosts: InstagramPost[] = [
   {
     id: '1',
-    image: '/images/collections/Birthday_dress.jpeg',
+    image: '/images/products/Betty  White Maxi Dress.JPG',
     likes: 1247,
     comments: 89
   },
   {
     id: '2',
-    image: '/images/collections/creamandchoc.jpg',
+    image: '/images/products/Betty Yellow Maxi dress.jpg',
     likes: 892,
     comments: 56
   },
   {
     id: '3',
-    image: '/images/collections/e4cc8f25ddf3e14e264a6054ebaa3a8b.jpg',
+    image: '/images/products/Betty Patterned Maxi dress.jpeg',
     likes: 1567,
     comments: 123
   },
   {
     id: '4',
-    image: '/images/collections/fb1ebee02fc2fe7605b961fce5cca6ee.jpg',
+    image: '/images/products/Betty Mono patterened Maxi dress.jpg',
     likes: 743,
     comments: 45
   },
   {
     id: '5',
-    image: '/images/collections/image-7-removebg-preview.png',
+    image: '/images/products/Christy dress.jpg',
     likes: 1123,
     comments: 78
   },
   {
     id: '6',
-    image: '/images/collections/Birthday_dress.jpeg',
+    image: '/images/products/Doris Evening dress..JPG',
     likes: 987,
     comments: 67
+  },
+  {
+    id: '7',
+    image: '/images/products/Betty Black Midi Dress .jpg',
+    likes: 1156,
+    comments: 92
+  },
+  {
+    id: '8',
+    image: '/images/products/Betty two tone print Mini Dress.jpg',
+    likes: 1342,
+    comments: 156
+  },
+  {
+    id: '9',
+    image: '/images/products/Enitan Afro print Shift dress .jpg',
+    likes: 1089,
+    comments: 78
   }
 ];

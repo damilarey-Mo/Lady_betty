@@ -21,31 +21,45 @@ export default function Hero() {
   const slides = [
     {
       id: 1,
-      title: "Birthday Collection",
-      subtitle: "Elegant dresses perfect for special celebrations and memorable moments.",
-      image: "/images/collections/Birthday_dress.jpeg",
-      buttonText: "Shop Birthday Collection"
+      title: "Elegant Grace",
+      subtitle: "Flowing silhouette that flatters and showcases the full look.",
+      image: "/images/products/Betty  White Maxi Dress.JPG",
+      buttonText: "Shop Maxi Dresses"
     },
     {
       id: 2,
-      title: "Cream & Chocolate",
-      subtitle: "Sophisticated pieces in warm, neutral tones for everyday elegance.",
-      image: "/images/collections/creamandchoc.jpg",
-      buttonText: "Shop Cream & Chocolate"
+      title: "Radiant Sunshine",
+      subtitle: "Sunlit elegance with a full-length profile for standout moments.",
+      image: "/images/products/Betty Yellow Maxi dress.jpg",
+      buttonText: "Shop Maxi Dresses"
     },
     {
       id: 3,
-      title: "Summer Essentials",
-      subtitle: "Light and breezy styles that keep you comfortable and stylish all season.",
-      image: "/images/collections/e4cc8f25ddf3e14e264a6054ebaa3a8b.jpg",
-      buttonText: "Shop Summer Collection"
+      title: "Bold Statement",
+      subtitle: "Statement patterns designed to be seen from head to toe.",
+      image: "/images/products/Betty Patterned Maxi dress.jpeg",
+      buttonText: "Shop Patterned Styles"
     },
     {
       id: 4,
-      title: "Elegant Evening",
-      subtitle: "Stunning outfits for your most glamorous nights out.",
-      image: "/images/collections/fb1ebee02fc2fe7605b961fce5cca6ee.jpg",
-      buttonText: "Shop Evening Wear"
+      title: "Modern Sophistication",
+      subtitle: "Modern monochrome with a full-body, graceful fall.",
+      image: "/images/products/Betty Mono patterened Maxi dress.jpg",
+      buttonText: "Shop Monochrome"
+    },
+    {
+      id: 5,
+      title: "Timeless Beauty",
+      subtitle: "Elegant full-length profile that elongates and refines.",
+      image: "/images/products/Christy dress.jpg",
+      buttonText: "Shop Christy"
+    },
+    {
+      id: 6,
+      title: "Evening Glamour",
+      subtitle: "A refined evening silhouette—complete look, head-to-toe.",
+      image: "/images/products/Doris Evening dress..JPG",
+      buttonText: "Shop Evening"
     }
   ];
 
@@ -124,7 +138,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-4xl md:text-6xl lg:text-6xl font-semibold font-playfair mb-6 leading-tight drop-shadow-lg"
+                  className="text-4xl md:text-6xl lg:text-6xl font-semibold font-playfair mb-6 leading-tight drop-shadow-lg text-warm-beige"
                 >
                   {slides[currentSlide].title}
                 </motion.h1>

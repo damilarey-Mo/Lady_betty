@@ -22,7 +22,7 @@ export default function Section({
   return (
     <section 
       id={id}
-      className={`py-16 lg:py-24 ${backgroundClasses[background]} ${className}`}
+      className={`py-20 md:py-24 lg:py-32 ${backgroundClasses[background]} ${className}`}
     >
       {children}
     </section>
