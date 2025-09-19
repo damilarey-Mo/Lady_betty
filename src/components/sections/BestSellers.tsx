@@ -123,13 +123,18 @@ export default function BestSellers() {
                       <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                       {/* Quick Add Button */}
-                      <motion.button
+                      <motion.a
                         whileHover={{ scale: 1.1 }}
+                        href={`https://wa.me/2347067030161?text=${encodeURIComponent(
+                          `hey i saw this dress (${product.name}) on your website, i'll like to order`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="absolute top-4 right-4 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg"
-                        aria-label={`Add ${product.name}`}
+                        aria-label={`WhatsApp ${product.name}`}
                       >
                         <Plus size={20} className="text-dark-olive" />
-                      </motion.button>
+                      </motion.a>
                     </div>
 
                     <div className="p-4 relative">
@@ -145,6 +150,17 @@ export default function BestSellers() {
                       <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-300 absolute inset-0 bg-black/80 text-white p-4 flex flex-col justify-center items-center text-center">
                         <h4 className="font-semibold mb-2">{product.color} {product.style}</h4>
                         <p className="text-sm leading-relaxed">{product.description}</p>
+                        <a
+                          href={`https://wa.me/2347067030161?text=${encodeURIComponent(
+                            `hey i saw this dress (${product.name}) on your website, i'll like to order`
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center px-4 py-2 rounded-md bg-new-accent text-dark-olive font-semibold"
+                          aria-label={`WhatsApp order for ${product.name}`}
+                        >
+                          Order via WhatsApp
+                        </a>
                       </div>
                     </div>
                   </Card>

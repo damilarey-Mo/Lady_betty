@@ -69,7 +69,7 @@ export const products: Product[] = [
   {
     id: '1',
     name: 'Betty White Maxi Dress',
-    price: 28500,
+    price: 25000,
     image: '/images/products/Betty  White Maxi Dress.JPG',
     category: 'Maxi',
     description: 'Elegant white maxi with flowing silhouette for polished occasions.',
@@ -79,7 +79,7 @@ export const products: Product[] = [
   {
     id: '2',
     name: 'Betty Yellow Maxi Dress',
-    price: 27500,
+    price: 25000,
     image: '/images/products/Betty Yellow Maxi dress.jpg',
     category: 'Maxi',
     description: 'Vibrant yellow maxi dress with full-length movement and ease.',
@@ -89,7 +89,7 @@ export const products: Product[] = [
   {
     id: '3',
     name: 'Betty Patterned Maxi Dress',
-    price: 29500,
+    price: 25000,
     image: '/images/products/Betty Patterned Maxi dress.jpeg',
     category: 'Patterned',
     description: 'Statement patterned maxi for standout moments and confident style.',
@@ -99,7 +99,7 @@ export const products: Product[] = [
   {
     id: '4',
     name: 'Betty Mono Patterned Maxi Dress',
-    price: 29500,
+    price: 25000,
     image: '/images/products/Betty Mono patterened Maxi dress.jpg',
     category: 'Monochrome',
     description: 'Modern monochrome maxi with elevated simplicity and flow.',
@@ -109,7 +109,7 @@ export const products: Product[] = [
   {
     id: '5',
     name: 'Christy Dress',
-    price: 32500,
+    price: 25000,
     image: '/images/products/Christy dress.jpg',
     category: 'Evening',
     description: 'Refined full-length evening dress with elegant lines.',
@@ -119,7 +119,7 @@ export const products: Product[] = [
   {
     id: '6',
     name: 'Doris Evening Dress',
-    price: 34500,
+    price: 20000,
     image: '/images/products/Doris Evening dress..JPG',
     category: 'Evening',
     description: 'Polished evening silhouette designed for head‑to‑toe presence.',
@@ -129,7 +129,7 @@ export const products: Product[] = [
   {
     id: '7',
     name: 'Betty Black Midi Dress',
-    price: 26500,
+    price: 25000,
     image: '/images/products/Betty Black Midi Dress .jpg',
     category: 'Midi',
     description: 'Chic black midi with versatile day‑to‑evening appeal.',
@@ -139,7 +139,7 @@ export const products: Product[] = [
   {
     id: '8',
     name: 'Betty Two‑Tone Print Mini Dress',
-    price: 25500,
+    price: 28000,
     image: '/images/products/Betty two tone print Mini Dress.jpg',
     category: 'Mini',
     description: 'Playful two‑tone mini designed to stand out.',
@@ -149,7 +149,7 @@ export const products: Product[] = [
   {
     id: '9',
     name: 'Enitan Afro Print Shift Dress',
-    price: 23500,
+    price: 20000,
     image: '/images/products/Enitan Afro print Shift dress .jpg',
     category: 'Shift',
     description: 'Afro‑print shift dress with modern cultural flair.',
@@ -159,7 +159,7 @@ export const products: Product[] = [
   {
     id: '10',
     name: 'Enitan Floral Print Shift Dress',
-    price: 23500,
+    price: 20000,
     image: '/images/products/Enitan Floral print Shift dress .jpeg',
     category: 'Shift',
     description: 'Floral shift dress with soft drape and ease.',
@@ -169,7 +169,7 @@ export const products: Product[] = [
   {
     id: '11',
     name: 'Enitan Red Floral Shift Dress',
-    price: 23900,
+    price: 20000,
     image: '/images/products/Enitan Red Floral Shift dress .jpeg',
     category: 'Shift',
     description: 'Red floral shift with confident color and comfort.',
@@ -182,7 +182,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     name: 'Aisha',
-    location: 'Lagos, Nigeria',
+    location: 'Abuja, Nigeria',
     rating: 5,
     text: 'The quality of these pieces is incredible. I feel confident and beautiful every time I wear them. The fit is perfect and the fabrics are so luxurious.',
     image: '/images/testimonials/Aisha.jpg'
@@ -190,7 +190,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '2',
     name: 'Chioma',
-    location: 'Abuja, Nigeria',
+    location: 'Lagos, Nigeria',
     rating: 5,
     text: 'I love how versatile the collections are. I can dress them up for work or down for weekends. The attention to detail is amazing.',
     image: '/images/testimonials/Chioma.jpg'
@@ -198,7 +198,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '3',
     name: 'Halimat',
-    location: 'Enugu, Nigeria',
+    location: 'Abuja, Nigeria',
     rating: 5,
     text: 'These clothes make me feel empowered and elegant. The customer service is exceptional and shipping is always fast.',
     image: '/images/testimonials/Halimat.jpg'

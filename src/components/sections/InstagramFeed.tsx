@@ -31,8 +31,11 @@ export default function InstagramFeed() {
         {/* Instagram Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
           {instagramPosts.map((post, index) => (
-            <motion.div
+            <motion.a
               key={post.id}
+              href="https://www.instagram.com/the_lady_betty_/"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -60,10 +63,10 @@ export default function InstagramFeed() {
                       <span className="text-sm">{post.comments}</span>
                     </div>
                   </div>
-                  <p className="text-xs opacity-90">Tap to view</p>
+                  <p className="text-xs opacity-90">Tap to view on Instagram</p>
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
